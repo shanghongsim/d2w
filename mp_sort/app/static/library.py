@@ -73,7 +73,7 @@ def sortnumber2():
 		- create a string of the sorted numbers and store it in array_str
 	'''
 	# The following line get the value of the text input called "numbers"
-	value = document.getElementsByName("numbers")[0].value
+	value = document.getElementsByName("numbers")[0].value # get element whose id matches specified string from DOM tree, name need not be unique
 	# print(value)
 	# Throw alert and stop if nothing in the text input
 	if value == "":
@@ -96,8 +96,9 @@ def sortnumber2():
 	array_str=array_str[1:]
 	# print(array_str)
 
-	document.getElementById("sorted").innerHTML = array_str
+	document.getElementById("sorted").innerHTML = array_str # send element whose id matches specified string to DOM tree, ID must be unique
 
+# implemented bubble sort
 def sort_func(arr):
 	n=len(arr)
 	swap=True
